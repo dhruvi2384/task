@@ -27,33 +27,143 @@ let b = 44;
 let c = 23;
 const ans = a * a - 4 * a * c;
 console.log(ans);
-if (ans > 0) 
-{
+if (ans > 0) {
   root1 = -b + Math.sqrt(ans) / (2 * a);
   root1 = -b - Math.sqrt(ans) / (2 * a);
   document.write(root1);
-} 
-else if (ans == 0) 
-{
+} else if (ans == 0) {
   root1 = root2 - b / (2 * a);
   document.write(root1);
-} 
-else 
-{
+} else {
   let result = (-b / (2 * a)).toFixed(2);
   let result2 = (Math.sqrt(-result) / (2 * a)).toFixed(2);
   document.write(result2);
 }
 
 // km to mile
-let km = prompt("Enter killo-meter")
-const MIlE = 0.621371
-let totalmile = km * MIlE
-document.write("<br/>" + km + "km is =" + totalmile)
-
+function mileKm() {
+  let km = document.getElementById("num").value;
+  const MIlE = 0.621371;
+  let totalmile = km * MIlE;
+  document.write("<br/>" + km + "km is =" + totalmile);
+}
 // Javascript Program to Convert Celsius to Fahrenheit
-let cels = prompt("Enter celsius")
-let fahrenheit = (9/5) * cels + 32 
-document.write("<br/>" + fahrenheit +"F")
+function checkCelsius() {
+  let cels = document.getElementById("num").value;
+  let fahrenheit = (9 / 5) * cels + 32;
+  document.write("<br/>" + fahrenheit + "F");
+}
 
 // generate rendom number
+const randomNum = Math.floor(Math.random() * 10000);
+// console.log(randomNum)
+document.write("<br/>" + "rendom number is :" + randomNum);
+
+// Javascript Program to Check if a number is Positive, Negative, or Zero
+
+function checkNumber() {
+  let numberCheck = document.getElementById("num").value;
+  const finalNum = Number(numberCheck);
+  console.log(typeof finalNum);
+  if (finalNum == 0) {
+    document.write("Number is Zero");
+  } else if (finalNum > 0) {
+    document.write("Number is positive");
+  } else if (finalNum < 0) {
+    document.write("Number is negative");
+  } else {
+    document.write("This is not a number");
+  }
+}
+
+// Javascript Program to Check if a Number is Odd or Even
+
+function oddEven() {
+  let oddEvenNum = document.getElementById("num").value;
+  let checkNum = oddEvenNum % 2 == 0 ? "number is Even" : "number is Odd";
+  document.write(checkNum);
+}
+
+// find lagest number
+let number1 = 200;
+let number2 = 300;
+let number3 = 400;
+let findMax = Math.max(number1, number2, number3);
+document.write(`<br/> largest number is ${findMax}`);
+
+// find a prime number
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+  if (num % 2 === 0 || num % 3 === 0) return false;
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const number = 24;
+if (isPrime(number)) {
+  console.log(number + " is a prime number");
+} else {
+  console.log(number + " is not a prime number");
+}
+
+// factorial
+let abc = 10;
+let fact = 1;
+for (i = 1; i <= abc; i++) {
+  fact *= i;
+}
+console.log(`The factorial of ${abc} is ${fact}.`);
+
+// table
+let tableWant = 19;
+let tables = 1;
+for (i = 1; i <= 10; i++) {
+  let table = i * tableWant;
+  document.write(`<br/> ${tableWant} * ${i} = ${table}`);
+}
+// fibo series
+let fibo = 20;
+let numberOne = 0;
+let numberTwo = 1;
+console.log(numberOne);
+console.log(numberTwo);
+for (let i = 2; i <= fibo; i++) {
+  let fiboSeries = numberOne + numberTwo;
+  numberOne = numberTwo;
+  numberTwo = fiboSeries;
+  console.log(numberTwo);
+}
+
+// armstong number
+let armstongNum = 370;
+let length = armstongNum.toString().length;
+let sum = 0;
+let temp = armstongNum;
+
+while (temp > 0) {
+  let rem = temp % 10;
+  sum += rem ** length;
+  temp = parseInt(temp / 10);
+  console.log(temp);
+}
+
+if (sum === armstongNum) {
+  console.log("Number is an Armstrong number");
+} else {
+  console.log("Number is not an Armstrong number");
+}
+
+// do sum natural num
+let num = 100;
+let totalofNum = 0
+for (i = 1; i <= num; i++) {
+   totalofNum += i ;
+  }
+  
+console.log(`total of number is ${totalofNum}`);
+
