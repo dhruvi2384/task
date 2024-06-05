@@ -160,10 +160,104 @@ if (sum === armstongNum) {
 
 // do sum natural num
 let num = 100;
-let totalofNum = 0
+let totalofNum = 0;
 for (i = 1; i <= num; i++) {
-   totalofNum += i ;
-  }
-  
+  totalofNum += i;
+}
+
 console.log(`total of number is ${totalofNum}`);
 
+// JavaScript Program to Check if the Numbers Have Same Last Digit
+let lastDigitNum1 = 123320;
+let lastDigitNum2 = 10321;
+let lastTwoDigitsNum1 = lastDigitNum1 % 100;
+let lastTwoDigitsNum2 = lastDigitNum2 % 100;
+if (lastTwoDigitsNum1 === lastTwoDigitsNum2) {
+  console.log("Last two digits are the same.");
+} else {
+  console.log("Last two digits are different.");
+}
+
+// JavaScript Program to Find HCF or GCD LCM
+
+// let numberHG1 = prompt("Enetr number 1");
+// let numberHG2 = prompt("Enetr number 2");
+// let gcd;
+// for (i = 1; i <= numberHG1 && i < i <= numberHG2; i++) {
+//   if (numberHG1 % i == 0 && numberHG2 % i == 0) {
+//     gcd = i;
+//   }
+// }
+// console.log(gcd);
+// let lcm = (numberHG1 * numberHG2) / gcd;
+// console.log(lcm);
+
+// find a factors}
+let totalOfNumbers;
+function totalOfNum(numbers) {
+  if (numbers > 0) {
+    return numbers + totalOfNum(numbers - 1);
+  } else {
+    return numbers;
+  }
+}
+const factorsNumber = totalOfNum(5);
+console.log(factorsNumber);
+
+// guess the number
+// let randomNumber = Math.floor(Math.random() * 10);
+// let otp;
+// console.log(randomNumber);
+// do {
+//   otp = prompt("Guess the number between 1 to 10....");
+//   if (randomNumber == otp) {
+//     console.log("Congratulation Number is match");
+//     break;
+//   }
+// } while (randomNumber !== otp);
+
+// program to convert decimal to binary
+// const decimalNum = parseInt(prompt('Enter a decimal number: '));
+// convert to binary
+// const result = decimalNum.toString(2);
+// console.log('Binary:' + ' ' + result);
+
+// asci value 
+let asci = 3;
+const asciValueOf = asci.toString().charCodeAt(0);
+console.log(asciValueOf);
+
+// JavaScript Program to Check Whether a String is Palindrome or Not
+let PalindromeNum1 = 123320;
+let isPalindrome = true;
+  
+  let DigitsPalindromeNum1 = PalindromeNum1.toString();
+  for (let i = 0; i < DigitsPalindromeNum1.length / 2; i++) {
+      if (DigitsPalindromeNum1[i] !== DigitsPalindromeNum1[DigitsPalindromeNum1.length - 1 - i]) {
+          isPalindrome = false;
+          break;
+      }
+  }
+  
+  if (isPalindrome) {
+      console.log("The number is a palindrome");
+  } else {
+      console.log("The number is not a palindrome");
+  }
+
+  // JavaScript Program to Sort Words in Alphabetical Order
+let string = "zxyshjwdhfkjwf"
+let sortString = string.split("").sort()
+let stringShort =sortString.join("")
+console.log(stringShort)
+
+// JavaScript Program to Replace Characters of a String
+let stringCha = "Hello My name is Dhruvi Bhavsar Hello I am Dhruvi"
+let replace = stringCha.replace(/Dhruvi/g , 'User')
+console.log(replace)
+
+// JavaScript Program to Reverse a String
+let reverseString = "Hello"
+let reverseStringText = reverseString.split("")
+let stringjoin = reverseStringText.reverse()
+console.log(stringjoin.join(""))
