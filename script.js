@@ -222,10 +222,10 @@ console.log(factorsNumber);
 // const result = decimalNum.toString(2);
 // console.log('Binary:' + ' ' + result);
 
-// asci value 
-let asci = 3;
-const asciValueOf = asci.toString().charCodeAt(0);
-console.log(asciValueOf);
+// // asci value 
+// let asci = 3;
+// const asciValueOf = asci.toString().charCodeAt(0);
+// console.log(asciValueOf);
 
 // JavaScript Program to Check Whether a String is Palindrome or Not
 let PalindromeNum1 = 123320;
@@ -238,14 +238,12 @@ let isPalindrome = true;
           break;
       }
   }
-  
-  if (isPalindrome) {
+   if (isPalindrome) {
       console.log("The number is a palindrome");
   } else {
       console.log("The number is not a palindrome");
   }
-
-  // JavaScript Program to Sort Words in Alphabetical Order
+// JavaScript Program to Sort Words in Alphabetical Order
 let string = "zxyshjwdhfkjwf"
 let sortString = string.split("").sort()
 let stringShort =sortString.join("")
@@ -261,3 +259,94 @@ let reverseString = "Hello"
 let reverseStringText = reverseString.split("")
 let stringjoin = reverseStringText.reverse()
 console.log(stringjoin.join(""))
+
+// JavaScript Program to Create Objects in Different Ways and remove js obj 
+const obj = {
+  fname : 'Dhruvi',
+  lname : 'bhavsar',
+  fullname : function ()
+  {
+    return this.fname +' '+ this.lname;
+  }
+}
+console.log('User fullname :', obj.fullname())
+delete obj.fname
+console.log('Remove Fname',obj.fullname())
+const checkKey = 'lname' in obj
+console.log(checkKey)
+if(checkKey == true)
+  {
+    console.log('lname is in the objact')
+  }
+else
+{
+  console.log("Objact ket is not match")
+}
+// JavaScript Program to Add Key/Value Pair to an Object
+obj.favColor = "red"
+console.log(obj)
+// JavaScript Program to Check the Number of Occurrences of a Character in the String
+const isChar = 'Dhruvi AtulKumar Bhavsar'
+const isCharStr = isChar.match(/a/g).length;
+console.log(isCharStr)
+
+// JavaScript Program to Convert the First Letter of a String into UpperCase
+const isCharUpper = 'upperCase'
+const converUpper = isCharUpper.charAt(0).toUpperCase()
+console.log(converUpper)
+
+// JavaScript Program to Count the Number of Vowels in a String
+const checkVowel = 'Dhruvi AtulKumar Bhavsar'
+const checkVoewelarr = isChar.match(/['a','e','i','o','u']/g).length;
+console.log(checkVoewelarr)
+
+// JavaScript Program to Check Whether a String Starts and Ends With Certain Characters
+const checkSe = "Dhruvi"
+if(checkSe.startsWith('D'))
+  {
+    console.log("string start with  D")
+  }
+else if(checkSe.endsWith('i'))
+  {
+    console.log("String end with i")
+  }  
+else
+{
+  console.log("Sorry string is not match")
+}  
+
+// replace string 
+const strReplace = "The apple is red and that red apple is not looks good";
+const replaceStr = /red/g;
+const newStr = strReplace.replace(replaceStr, "green");
+console.log(newStr);
+
+// generate rendom string
+const result = Math.random().toString(36).substring(2,7);
+console.log(result);
+
+// trim space 
+const strSpace = "    Dhruvi   Bhavsar"
+const strTrim = strSpace.trim()
+console.log(strTrim);
+
+// find a substring
+const enterMain = prompt("Enter Sting")
+const findword = prompt("Enter a string you want to find in privious")
+const serach = enterMain.includes(findword); //its true false
+if(serach ==  true)
+  {
+    console.log("your string is match");
+  }
+else
+{
+  console.log('string is not match');
+}  
+
+// program to encode a string to Base64
+
+const result12 = window.btoa(enterMain);
+console.log("encoding", result12);
+
+const result1 = window.atob(result12);
+console.log(result1);
