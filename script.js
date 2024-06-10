@@ -222,7 +222,7 @@ console.log(factorsNumber);
 // const result = decimalNum.toString(2);
 // console.log('Binary:' + ' ' + result);
 
-// // asci value 
+// // asci value
 // let asci = 3;
 // const asciValueOf = asci.toString().charCodeAt(0);
 // console.log(asciValueOf);
@@ -230,123 +230,219 @@ console.log(factorsNumber);
 // JavaScript Program to Check Whether a String is Palindrome or Not
 let PalindromeNum1 = 123320;
 let isPalindrome = true;
-  
-  let DigitsPalindromeNum1 = PalindromeNum1.toString();
-  for (let i = 0; i < DigitsPalindromeNum1.length / 2; i++) {
-      if (DigitsPalindromeNum1[i] !== DigitsPalindromeNum1[DigitsPalindromeNum1.length - 1 - i]) {
-          isPalindrome = false;
-          break;
-      }
+
+let digitsPalindromeNum1 = PalindromeNum1.toString();
+for (let i = 0; i < digitsPalindromeNum1.length / 2; i++) {
+  if (
+    digitsPalindromeNum1[i] !==
+    digitsPalindromeNum1[digitsPalindromeNum1.length - 1 - i]
+  ) {
+    isPalindrome = false;
+    break;
   }
-   if (isPalindrome) {
-      console.log("The number is a palindrome");
-  } else {
-      console.log("The number is not a palindrome");
-  }
+}
+if (isPalindrome) {
+  console.log("The number is a palindrome");
+} else {
+  console.log("The number is not a palindrome");
+}
 // JavaScript Program to Sort Words in Alphabetical Order
-let string = "zxyshjwdhfkjwf"
-let sortString = string.split("").sort()
-let stringShort =sortString.join("")
-console.log(stringShort)
+let string = "zxyshjwdhfkjwf";
+let sortString = string.split("").sort();
+let stringShort = sortString.join("");
+console.log(stringShort);
 
 // JavaScript Program to Replace Characters of a String
-let stringCha = "Hello My name is Dhruvi Bhavsar Hello I am Dhruvi"
-let replace = stringCha.replace(/Dhruvi/g , 'User')
-console.log(replace)
+let stringCha = "Hello My name is Dhruvi Bhavsar Hello I am Dhruvi";
+let replace = stringCha.replace(/Dhruvi/g, "User");
+console.log(replace);
 
 // JavaScript Program to Reverse a String
-let reverseString = "Hello"
-let reverseStringText = reverseString.split("")
-let stringjoin = reverseStringText.reverse()
-console.log(stringjoin.join(""))
+let reverseString = "Hello";
+let reverseStringText = reverseString.split("");
+let stringjoin = reverseStringText.reverse();
+console.log(stringjoin.join(""));
 
-// JavaScript Program to Create Objects in Different Ways and remove js obj 
+// JavaScript Program to Create Objects in Different Ways and remove js obj
 const obj = {
-  fname : 'Dhruvi',
-  lname : 'bhavsar',
-  fullname : function ()
-  {
-    return this.fname +' '+ this.lname;
-  }
-}
-console.log('User fullname :', obj.fullname())
-delete obj.fname
-console.log('Remove Fname',obj.fullname())
-const checkKey = 'lname' in obj
-console.log(checkKey)
-if(checkKey == true)
-  {
-    console.log('lname is in the objact')
-  }
-else
-{
-  console.log("Objact ket is not match")
+  fname: "Dhruvi",
+  lname: "bhavsar",
+  fullname: function () {
+    return this.fname + " " + this.lname;
+  },
+};
+console.log("User fullname :", obj.fullname());
+delete obj.fname;
+console.log("Remove Fname", obj.fullname());
+const checkKey = "lname" in obj;
+console.log(checkKey);
+if (checkKey == true) {
+  console.log("lname is in the objact");
+} else {
+  console.log("Objact ket is not match");
 }
 // JavaScript Program to Add Key/Value Pair to an Object
-obj.favColor = "red"
-console.log(obj)
+obj.favColor = "red";
+console.log(obj);
 // JavaScript Program to Check the Number of Occurrences of a Character in the String
-const isChar = 'Dhruvi AtulKumar Bhavsar'
+const isChar = "Dhruvi AtulKumar Bhavsar";
 const isCharStr = isChar.match(/a/g).length;
-console.log(isCharStr)
+console.log(isCharStr);
 
 // JavaScript Program to Convert the First Letter of a String into UpperCase
-const isCharUpper = 'upperCase'
-const converUpper = isCharUpper.charAt(0).toUpperCase()
-console.log(converUpper)
+const isCharUpper = "upperCase";
+const converUpper = isCharUpper.charAt(0).toUpperCase();
+console.log(converUpper);
 
 // JavaScript Program to Count the Number of Vowels in a String
-const checkVowel = 'Dhruvi AtulKumar Bhavsar'
+const checkVowel = "Dhruvi AtulKumar Bhavsar";
 const checkVoewelarr = isChar.match(/['a','e','i','o','u']/g).length;
-console.log(checkVoewelarr)
+console.log(checkVoewelarr);
 
 // JavaScript Program to Check Whether a String Starts and Ends With Certain Characters
-const checkSe = "Dhruvi"
-if(checkSe.startsWith('D'))
-  {
-    console.log("string start with  D")
-  }
-else if(checkSe.endsWith('i'))
-  {
-    console.log("String end with i")
-  }  
-else
-{
-  console.log("Sorry string is not match")
-}  
+const checkSe = "Dhruvi";
+if (checkSe.startsWith("D")) {
+  console.log("string start with  D");
+} else if (checkSe.endsWith("i")) {
+  console.log("String end with i");
+} else {
+  console.log("Sorry string is not match");
+}
 
-// replace string 
+// replace string
 const strReplace = "The apple is red and that red apple is not looks good";
 const replaceStr = /red/g;
 const newStr = strReplace.replace(replaceStr, "green");
 console.log(newStr);
 
 // generate rendom string
-const result = Math.random().toString(36).substring(2,7);
+const result = Math.random().toString(36).substring(2, 7);
 console.log(result);
 
-// trim space 
-const strSpace = "    Dhruvi   Bhavsar"
-const strTrim = strSpace.trim()
+// trim space
+const strSpace = "    Dhruvi   Bhavsar";
+const strTrim = strSpace.trim();
 console.log(strTrim);
 
 // find a substring
-const enterMain = prompt("Enter Sting")
-const findword = prompt("Enter a string you want to find in privious")
-const serach = enterMain.includes(findword); //its true false
-if(serach ==  true)
-  {
-    console.log("your string is match");
-  }
-else
-{
-  console.log('string is not match');
-}  
+// const enterMain = prompt("Enter Sting")
+// const findword = prompt("Enter a string you want to find in privious")
+// const serach = enterMain.includes(findword); //its true false
+// if(serach ==  true)
+//   {
+//     console.log("your string is match");
+//   }
+// else
+// {
+//   console.log('string is not match');
+// }
 
 // program to encode a string to Base64
 
-const result12 = window.btoa(enterMain);
-console.log("encoding", result12);
+// const result12 = window.btoa(enterMain);
+// console.log("encoding", result12);
 
-const result1 = window.atob(result12);
-console.log(result1);
+// const result1 = window.atob(result12);
+// console.log(result1);
+
+// JavaScript Program to Replace all Instances of a Character in a String
+const replaceA = `
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+ It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+ It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`;
+
+const replaceChar = replaceA.replace(/a/g, "A");
+console.log(`total replace a to A: ${replaceChar.length}`);
+console.log(replaceChar);
+// /(\r\n|\r|\n)/ check new line
+const breakLine = replaceA.replace(/(\r\n|\r|\n)/g, "<br/>");
+document.write(breakLine);
+
+// JavaScript Program to Display Date and Time
+const dateToday = new Date();
+console.log(dateToday);
+const getYear = dateToday.getFullYear();
+// const getYear = dateToday.getFullYear();
+console.log(getYear);
+// JavaScript Program to Check Leap Year
+if ((getYear % 4 == 0 && getYear % 100 != 0) || getYear % 400 == 0) {
+  console.log("this is leap");
+} else {
+  console.log("year is not leap");
+}
+
+// JavaScript Program to Format the Date
+const getMonth = dateToday.getMonth() + 1;
+const getDay = dateToday.getDate();
+const formatDate = getDay + "/" + getMonth + "/" + getYear;
+console.log("Today's Date:", formatDate);
+
+// get current date
+const currentDate = dateToday.toLocaleDateString();
+console.log(`Current date is = ${currentDate}`);
+
+// JavaScript Program to create count-down
+// const getHours = dateToday.getHours()
+// const getMin = dateToday.getMinutes()
+// const getSecond = dateToday.getSeconds()
+
+// const getTime = dateToday.getTime() + 24 * 60 * 60 * 1000
+
+// let countDownvar = setInterval(function countdown()
+// {
+//     let time = new Date().getTime()
+//     let leftTime = getTime - time
+
+//     const day = Math.floor(leftTime/(1000*60*60*24))
+//     console.log(day);
+//     const hours = Math.floor(leftTime/(1000*60*60)%24)
+//     console.log(hours);
+//     const minutes = Math.floor( (leftTime/1000/60) % 60 );
+//     console.log(minutes);
+//     const seconds = Math.floor( (leftTime/1000) % 60 );
+//     console.log(seconds);
+//     console.log(day + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+//     if (leftTime <= 0)
+//       {
+//        clearInterval(countDownvar);
+//         console.log('CountDown Finished');
+//     }
+//   }, 3000);
+
+// JavaScript Program to Remove Specific Item From an Array
+function removeItem(array, n) {
+  const myarr = [];
+  for (i = 0; i < array.length; i++) {
+    if (array[i] != n) {
+      myarr.push(array[i]);
+    }
+  }
+  return myarr;
+}
+const newarr = removeItem(["gekk", "bookd", "hello"], "hello");
+console.log(newarr);
+
+// JavaScript Program to add Specific Item From an Array
+
+function addItem() {
+  let arr = ["hello", "how", "many", "hdhd"];
+  let index = prompt("Enter a index you want to remove");
+  let element = prompt("Enter item");
+
+  for (let i = arr.length; i > index; i--) {
+    console.log(arr.length)
+    arr[i] = arr[i - 1];
+    console.log(arr[i])
+  }
+  arr[index] = element;
+  console.log(arr);
+}
+
+addItem();
+
+// JavaScript Program to Add Element to Start of an Array
+let addElement = ["key", "mobile" , 'earphones']
+addElement.unshift("start")
+console.log(addElement)
+
